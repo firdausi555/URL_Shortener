@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shortened URL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-green-50 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md text-center">
+        <h2 class="text-xl font-semibold text-green-600 mb-4">Your Short URL:</h2>
+        <a href="/{{ short_code }}" class="text-blue-500 underline text-lg">
+            {{ request.build_absolute_uri }}/{{ short_code }}
+        </a>
+    </div>
+</body>
+</html>
